@@ -41,6 +41,7 @@ from the `BaseFileSaver` class. Here is a variant with S3:
 ```python
 from profiling_helpers import profile_it, S3FileSaver
 
+# You have to "pip install profiling-helpers[aws]" for this to work
 @profile_it(S3FileSaver("s3://my-bucket/my/path/to/profiles/", kms_key_id="..."))
 def my_slow_function(x):
     sleep(10)
